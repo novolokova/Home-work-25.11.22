@@ -30,7 +30,7 @@ console.log(minMaxNumber1(arrNum));
 
 
 
-const arrNumClon1 = arrNum.slice(0);
+const arrNumCopy1 = [...arrNum];
 /**
  *
  * @param {[number]} arr
@@ -41,11 +41,11 @@ const minMaxNumber2 = (arr) =>
     .splice(arr.indexOf(Math.max(...arr)), 1)
     .concat(arr.splice(arr.indexOf(Math.min(...arr)), 1));
 
-console.log(minMaxNumber2(arrNumClon1));
+console.log(minMaxNumber2(arrNumCopy1));
 
 //************** */
 
-const arrNumClon2 = arrNum.slice(0);
+const arrNumCopy2 = arrNum.slice(0);
 
 /**
  *
@@ -58,10 +58,10 @@ const minMaxNumber3 = (arr) => {
   return arr.splice(-1, 1).concat(arr.splice(0, 1));
 };
 
-console.log(minMaxNumber3(arrNumClon2));
+console.log(minMaxNumber3(arrNumCopy2));
 
 //************** */
-const arrNumClon3 = arrNum.slice(0);
+const arrNumCopy3 = arrNum.map((i) => i);
 
 /**
  *
@@ -74,7 +74,7 @@ const minMaxNumber4 = (arr) => {
   return [arr[arr.length - 1], arr[0]];
 };
 
-console.log(minMaxNumber4(arrNumClon3));
+console.log(minMaxNumber4(arrNumCopy3));
 
 //************** */
 
